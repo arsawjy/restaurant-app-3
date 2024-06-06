@@ -1,0 +1,474 @@
+* {
+	padding: 0;
+	margin: 0;
+  }
+   
+  body {
+	font-family: 'Poppins', sans-serif;
+	background-color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+  }
+   
+   
+  /*
+	AppBar
+  */
+   
+  .app-bar {
+	padding: 8px 16px;
+	background-color: white;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 10px;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .app-bar .app-bar__menu {
+	display: none; /* Hide the menu button by default */
+	align-items: center;
+  }
+  
+  .app-bar .app-bar__menu button {
+	background-color: transparent;
+	border: none;
+	min-height: 44px;
+	font-size: 48px;
+	padding: 8px;
+	cursor: pointer;
+	display: inline-block;
+  }
+  
+  .app-bar .app-bar__brand {
+	display: flex;
+	align-items: center;
+  }
+  
+  .app-bar .app-bar__brand h1 {
+	color: #db0000;
+	text-transform: uppercase;
+	font-size: 24px;
+	user-select: none;
+  }
+  
+  .app-bar .app-bar__navigation {
+	display: flex;
+	align-items: center;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: auto;
+	transition: all 0.3s;
+	padding: 8px;
+	background-color: white;
+	overflow: hidden;
+  }
+  
+  .app-bar .app-bar__navigation ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .app-bar .app-bar__navigation ul li {
+	margin: 0 10px;
+  }
+  
+  .app-bar .app-bar__navigation ul li a {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 20px;
+  }
+  
+  .app-bar-main {
+	display: none; /* Hide app-bar-main by default */
+  }
+   
+  /*
+	Main Content
+  */
+   
+  main {
+	padding: 0px;
+	flex: 1;
+  }
+   
+  .content {
+	margin: 0 auto;
+	min-height: 100%;
+  }
+   
+  .content .content__heading {
+	font-weight: normal;
+  }
+
+  .hero {
+	display: flex;
+	align-items: center;
+	height: 750px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background-position: center;
+	background-color: Black !important;
+}
+.heroinner {
+	margin: 0 auto;
+	max-width: 800px
+}
+.herotitle {
+	color: #fff;
+	font-weight: medium;
+	font-size: 45px;
+}
+.herosub {
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.explore-title-text {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 25px;
+	padding-bottom: 25px;
+}
+
+.skip-to-content {
+	position: absolute;
+	top: -80px;
+	left: 0;
+	padding: 20px;
+	background-color: black;
+	border-radius: 20px;
+	color: white;
+	z-index: 99999;
+  }
+   
+  .skip-to-content:focus {
+	top: 0px;
+  }
+  /*
+	Restaurant list
+  */
+   
+  .restaurant {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+  }
+
+  .restaurant-list {
+	margin-left: 25px;
+	width: 100%;
+	max-width: 450px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.5);
+
+  }
+
+  .restaurant-list-image {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+  }
+
+  .restaurant-list-city {
+	background-color: tomato;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	position: absolute;
+	display: flex;
+	top: 8px;
+  	left: 16px;
+	gap: 10px;
+	font-size: 18px;
+  }
+
+  .restaurant-list-image img {
+	width: 100%;
+	max-height: 300px;
+  }
+
+  .restaurant-list-rating {
+	background-color: tomato;
+  	color: white;
+  	padding-inline: 12px;
+  	border-radius: 5px;
+  	position: absolute;
+  	top: 10px;
+  	right: 10px;
+  	font-size: 14px;
+  	display: flex;
+  	align-items: center;
+  	gap: 0px;
+  }
+
+  .restaurant-list-rating i {
+	color: white;
+  }
+
+  .restaurant-list-content {
+	padding: 15px;
+  }
+
+  .restaurant-list-desc {
+	font-size: 18px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+  }
+
+  .restaurant-list-button {
+	padding: 15px;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	border-radius: 15px;
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	min-height: 44px;
+	text-align: center;
+  }
+  
+  .restaurant-list-button a {
+	color: white;
+	font-size: 24px;
+	padding: 10px;
+	text-decoration: none; 
+  }
+
+/*
+	Restaurant Detail
+*/
+	.detail-text {
+	margin: 10px 0 10px 0;
+	font-size: 2rem;
+	text-align: center;
+  }
+
+  .detail-text-title {
+	color: black;
+  }
+
+  .detail-content-image {
+	border-radius: 10px;
+	position: relative;
+	width: 100%;
+  }
+
+  .detail-content-image img {
+	width: 100%;
+	border-radius: 20px;
+	/* height: 100%; */
+	/* box-shadow: 0 400px 100px rgba(0, 0, 0, 0.5); */
+	box-shadow: -1px 0 17px -4px rgba(0,0,0,0.87);
+  }
+
+ .detail-content-city {
+	background-color: tomato;
+  	color: white;
+  	padding-left: 10px;
+	padding-right: 10px;
+  	border-radius: 5px;
+  	position: absolute;
+  	top: 10px;
+  	left: 20px;
+  	font-size: 18px;
+  }
+ 
+  .detail-content-rating {
+	background-color: tomato;
+  	color: white;
+  	padding-inline: 10px;
+  	border-radius: 10px;
+  	position: absolute;
+  	top: 8px;
+  	right: 16px;
+  	font-size: 1.3rem;
+  	display: flex;
+  	align-items: center;
+  	gap: 15px;
+  }
+
+  .detail-content-info {
+	box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.2);
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	border-radius: 10px;
+	margin: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+  }
+
+  .detail-content-address {
+	margin-left: 15px;
+	margin-bottom: 10px;
+  }
+
+  .detail-content-categories {
+	margin-left: 15px;
+	margin-bottom: 10px;
+  }
+
+  .detail-content-food {
+	margin-left: 15px;
+	margin-bottom: 10px;
+  }
+
+  .detail-content-drink {
+	margin-left: 15px;
+	margin-bottom: 10px;
+  }
+
+  .detail-content-desc {
+	margin-left: 15px;
+	margin-bottom: 10px;
+  } */
+
+  .add-review-card-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh; 
+	padding: 20px; 
+	box-sizing: border-box; 
+  }
+  
+  .add-review-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 500px; 
+	box-sizing: border-box; 
+  }
+  
+  form {
+	box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	padding: 20px; 
+	background-color: white; 
+  }
+  
+  form h3 {
+	font-size: 24px;
+	margin-bottom: 20px; 
+  }
+  
+  .form-group {
+	width: 100%; 
+	margin-bottom: 15px; 
+  }
+  
+  .form-group input,
+  .form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1rem;
+	box-sizing: border-box; 
+	min-height: 44px;
+  }
+  
+  .form-button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .form-button #submitButton {
+	background-color: black;
+	color: white;
+	padding: 13px;
+	font-size: 1.3rem;
+	margin-block: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: none; 
+	width: 100%;
+	max-width: 200px; 
+  }
+
+  .review {
+	display: grid;
+	margin-top: 50px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+  }
+
+  .review-card {
+  	display: flex;
+  	gap: 20px;
+  	padding: 20px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  	border-radius: 10px;
+  }
+
+  .like {
+	width: 55px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: tomato;
+	
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	border-radius: 50%;
+	border: 0;
+	
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+  }
+
+  .favorite-text-title {
+	margin: 20px;
+  }
+
+
+  /*
+	Footer
+  */
+   
+  footer {
+	padding: 16px;
+  }
+   
+  footer p {
+	text-align: center;
+	color: #aaaaaa;
+  }
+   
+  footer p a {
+	color: #db0000;
+	text-decoration: none;
+  }
